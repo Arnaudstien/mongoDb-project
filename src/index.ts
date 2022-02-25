@@ -31,20 +31,21 @@ client.connect().then(async (client) => {
     },
   });
 
-  //const newUsers = [
-  //   {
-  //     Title: "Francis",
-  //     Type: "Ewlines",
-  //     synopsis: "francis@fewlines.co",
-  //   },
+  const users = [
+    {
+      Title: "eeee",
+      Type: "ccc",
+      synopsis: "ccc",
+    },
 
-  //   {
-  //     Title: "Farida",
-  //     Type: "Ewlines",
-  //     Synopsis: "farida@fewlines.co",
-  //   },
-  // ];
-  // db.collections("Movies").insertMany(newUsers);
+    {
+      Title: "cc",
+      Type: "cc",
+      Synopsis: "cccc",
+    },
+  ];
 
-  client.close();
+  db.collection("Movies")
+    .insertMany(users)
+    .then(() => client.close());
 });
